@@ -12,7 +12,7 @@ export const useDimensions = (ref) => {
     dimensions.current.height = ref.current.offsetHeight
   }, [ref])
 
-  console.log(dimensions.current)
+  // console.log(dimensions.current)
 
   return dimensions.current
 }
