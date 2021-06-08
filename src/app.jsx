@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <Nav
-      initial={false}
+      initial={'closed'}
       animate={isOpen ? 'open' : 'closed'}
       custom={height}
       ref={containerRef}
