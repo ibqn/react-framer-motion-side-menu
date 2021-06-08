@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import { useDimensions } from './hooks/use-dimentions'
 import styled from 'styled-components'
 import MenuToggle from './components/menu-toggle'
+import Navigation from './components/navigation'
 
 const Nav = styled(motion.nav)`
   position: absolute;
@@ -24,7 +25,7 @@ const sidebar = {
   closed: {
     clipPath: 'circle(30px at 40px 40px)',
     transition: {
-      // delay: 0.5,
+      delay: 0.5,
       type: 'spring',
       stiffness: 400,
       damping: 40,
@@ -54,6 +55,7 @@ const App = () => {
       ref={containerRef}
     >
       <Background variants={sidebar} />
+      <Navigation />
       <MenuToggle toggle={() => toggleOpen()} />
     </Nav>
   )
